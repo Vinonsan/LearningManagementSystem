@@ -1,0 +1,157 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    {% comment %} Bootstraplink {% endcomment %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    {% comment %} Bootstraplink end {% endcomment %}
+
+     {% comment %} csslink start {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/create_accounts.css' %}">
+     {% comment %} csslink end {% endcomment %}
+
+     {% comment %} font awesome link start {% endcomment %}
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     {% comment %} font awesome link end {% endcomment %}
+
+  </head>
+  <body>
+    
+    {% comment %} navbar start {% endcomment %}
+
+    <nav class="navbar navbar-expand-lg  navbar-dark " style="background-color: #003153;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" id="logo">Logo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="{% url "home" %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url "main" %}">Admin</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url "home" %}">Students</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Acadamics</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Management staff</a>
+              </li>
+              <li class="nav-item">
+                <i class="nav-link fa-solid fa-user"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+     {% comment %}navbar end {% endcomment %}
+  
+
+     
+    {% comment %} create account content start {% endcomment %}
+  
+
+
+    <section class="body w-100 p-3">
+
+      <div class="row">
+
+        
+
+          <div class="col-lg-12 col-md-12 mt-3">
+
+            <nav class="navbar ms-3 ">
+              <div class="container-fluid">
+                  <h1 class="" id="studenthead">Create Accounts</h1>
+                  
+                <form class="d-flex" role="search">
+                  <a href="{% url "main" %}" type="button" class="btn btn-danger"> <i class="fa-solid fa-circle-arrow-left"></i>Back</a>
+                  
+                      
+                </form>
+              </div>
+            </nav>
+
+              <div class="card">
+              
+                  <div class="card-body">
+                    <h5 class="card-title">STUDENT ACCOUNT</h5>
+                    <p class="card-text">Administrators meticulously design and organize courses, tailoring content to meet educational needs, ensuring experiences for students.</p>
+                    <a href="{% url "studentaccounts" %}" class="btn btn-danger">CLICK HERE</a>
+                  </div>
+
+              </div>
+
+          </div>
+
+          <div class="col-lg-12 col-md-12 mt-3">
+
+              <div class="card">
+              
+                  <div class="card-body">
+                    <h5 class="card-title">STAFF ACCOUNT</h5>
+                    <p class="card-text">Administrators meticulously design and organize courses, tailoring content to meet educational needs, ensuring experiences for students.</p>
+                    <a href="{% url "staffaccounts" %}" class="btn btn-danger">CLICK HERE</a>
+                  </div>
+
+              </div>
+
+          </div>
+
+          <div class="col-lg-12 col-md-12 mt-3">
+
+              <div class="card">
+              
+                  <div class="card-body">
+                    <h5 class="card-title">STUDENT COURSE INFO</h5>
+                    <p class="card-text">Administrators meticulously design and organize courses, tailoring content to meet educational needs, ensuring experiences for students.</p>
+                    <a href="{% url "studentcourse" %}" class="btn btn-danger">CLICK HERE</a>
+                  </div>
+
+              </div>
+
+          </div>
+
+         
+
+      </div>
+
+    </section>
+    
+
+  
+
+    {% comment %} create account content end{% endcomment %}
+     
+
+      {% comment %} footer section start {% endcomment %}
+      <section class="footer">
+
+        <i class="fa-brands fa-facebook fa-2x"></i>
+        <i class="fa-brands fa-instagram fa-2x"></i>
+        <i class="fa-brands fa-twitter fa-2x"></i>
+        <i class="fa-brands fa-linkedin fa-2x"></i>
+        <i class="fa-brands fa-tiktok fa-2x"></i>
+        <i class="fa-brands fa-github fa-2x"></i>
+        <i class="fa-brands fa-youtube fa-2x"></i>
+
+        <p>Rajarata University of Sri Lanka, Mihintale - 50300, Sri Lanka - +94 (25) 2266643 - info@rjt.ac.lk </p>
+        <p class="Copyright"> Copyright &copy; 2023 : Master Brain </p>
+
+      </section>
+      {% comment %} footer section end {% endcomment %}
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
