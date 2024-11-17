@@ -46,6 +46,8 @@ class Student(models.Model):
     Student_NIC_Number=models.CharField(max_length=150,null=False,blank=False)
     Student_Phone_Number=models.CharField(max_length=150,null=False,blank=False)
     Student_Password=models.CharField(max_length=100)
+    CA_Marks=models.CharField(max_length=3)
+    Final_Marks=models.CharField(max_length=3)
     
     def _str_(self) :
         return self.name
