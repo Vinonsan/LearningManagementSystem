@@ -46,6 +46,14 @@ def resetpassword(request):
 def acadamicspage(request):
     return render(request,"lms/acadamicspage.html")
 
+def acadamicsresult(request):
+    return render(request,"lms/acadamicsresult.html")
+
+def studentviewcourse(request):
+    student2=Student.objects.all()
+    context={'student': student2}
+    return render(request,"lms/studentviewcourse.html")
+
 def studentpage(request):
     return render(request,"lms/studentpage.html")
 
